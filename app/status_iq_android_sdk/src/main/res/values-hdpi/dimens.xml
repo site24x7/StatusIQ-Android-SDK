@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="elevation">8dp</dimen>
+    <dimen name="progress_bar_size">25dp</dimen>
+    <dimen name="text_medium">16sp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_large">35dp</dimen>
+    <dimen name="date_bg_border_width">1dp</dimen>
+    <dimen name="date_bg_radius">5dp</dimen>
+    <dimen name="component_summary_icon">20dp</dimen>
+    <dimen name="sub_component_margin">12dp</dimen>
+    <dimen name="text_small">14sp</dimen>
+    <dimen name="margin_max">30dp</dimen>
+    <dimen name="text_min">12sp</dimen>
+    <dimen name="text_spacing">6dp</dimen>
+    <dimen name="status_iq_margin">24dp</dimen>
+    <dimen name="text_large">20sp</dimen>
+</resources>

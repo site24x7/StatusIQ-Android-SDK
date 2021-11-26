@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <corners android:radius="@dimen/date_bg_radius" />
+    <solid android:color="@color/status_iq_white" />
+    <stroke android:color="@color/status_iq_single_component_date_bg" android:width="@dimen/date_bg_border_width"/>
+</shape>

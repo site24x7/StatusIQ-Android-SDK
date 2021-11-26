@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginBottom="@dimen/margin_medium"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:alpha="0.3"
+        android:background="@color/status_iq_black" />
+
+    <com.zoho.statusiqsdk.Utils.StatusIQTextView
+        android:id="@+id/tv_incident_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/margin_medium"
+        android:paddingTop="@dimen/margin_medium"
+        android:textSize="@dimen/text_medium"
+        tools:text="Zylker is Down"
+        android:textStyle="bold" />
+
+
+
+    <com.zoho.statusiqsdk.Utils.StatusIQTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_medium"
+        android:text="@string/incident_duration"
+        android:textColor="@color/status_iq_black"
+        android:layout_marginTop="@dimen/margin_max"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:textSize="@dimen/text_medium"
+        android:textStyle="bold" />
+
+    <com.zoho.statusiqsdk.Utils.StatusIQTextView
+        android:id="@+id/tv_incident_duration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/status_iq_light_text"
+        android:layout_marginHorizontal="@dimen/margin_medium"
+        android:lineSpacingExtra="@dimen/text_spacing"
+        android:textSize="@dimen/text_min"
+        />
+
+
+    <com.zoho.statusiqsdk.Utils.StatusIQTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_max"
+        android:layout_marginHorizontal="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:text="@string/affected_components"
+        android:textColor="@color/status_iq_black"
+        android:textSize="@dimen/text_medium"
+        android:textStyle="bold" />
+
+    <com.zoho.statusiqsdk.Utils.StatusIQTextView
+        android:id="@+id/tv_affected_components"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="@dimen/margin_medium"
+        android:lineSpacingExtra="@dimen/text_spacing"
+        android:textSize="@dimen/text_small"
+        android:layout_height="wrap_content" />
+
+
+    <com.zoho.statusiqsdk.Utils.StatusIQTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_max"
+        android:text="@string/incident_status_updates"
+        android:textColor="@color/status_iq_black"
+        android:textSize="@dimen/text_medium"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/incident_status_updates_list"
+        android:layout_marginHorizontal="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

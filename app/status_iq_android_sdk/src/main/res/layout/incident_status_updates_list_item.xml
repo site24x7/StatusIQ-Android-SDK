@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="@dimen/margin_medium"
+    >
+
+    <ImageView
+        android:id="@+id/img_incident_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/margin_small"
+        android:paddingEnd="@dimen/margin_small"
+        android:src="@drawable/status_iq_resolved"
+         />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@+id/img_incident_status"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <com.zoho.statusiqsdk.Utils.StatusIQTextView
+            android:id="@+id/tv_incident_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/status_iq_black"
+            android:textSize="@dimen/text_medium"
+            android:layout_marginVertical="@dimen/margin_small"
+            android:textStyle="bold" />
+
+        <com.zoho.statusiqsdk.Utils.StatusIQTextView
+            android:id="@+id/tv_status_description"
+            android:layout_width="match_parent"
+            android:lineSpacingExtra="6dp"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_height="wrap_content" />
+
+        <com.zoho.statusiqsdk.Utils.StatusIQTextView
+            android:id="@+id/tv_incident_reported_time"
+            android:layout_width="match_parent"
+            android:textColor="@color/status_iq_light_text"
+            android:textSize="@dimen/text_min"
+            android:layout_marginVertical="@dimen/margin_small"
+            android:lineSpacingExtra="6dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>
