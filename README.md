@@ -28,20 +28,23 @@ To customize, use the StatusIq.setTheme() method before using the StatusIq.openS
 <img width="720" alt="Screenshot 2022-01-13 at 2 11 40 PM" src="https://user-images.githubusercontent.com/97294110/149297302-608cc1ff-58d5-478d-936a-59f30d1ca634.png">
 
 
-<img width="790" alt="Screenshot 2022-01-13 at 2 23 16 PM" src="https://user-images.githubusercontent.com/97294110/149297522-ac96c38d-4854-4df7-8356-488c324ada73.png">
+<img width="790" alt="Screenshot 2022-01-13 at 2 23 16 PM" src="https://user-images.githubusercontent.com/97294110/149297522-ac96c38d-4854-4df7-8356-488c324ada73.png"> 
 
+<br>
 
-<img width="300" alt="Screenshot 2022-01-13 at 2 23 16 PM" src="https://user-images.githubusercontent.com/97294110/149318278-803dedb8-72e7-42ce-9f6b-1a4e8f445ffd.png">
-
+<p float="left">
+<img width="300" alt="Screenshot 2022-01-13 at 2 23 16 PM" src="https://user-images.githubusercontent.com/97294110/149318278-803dedb8-72e7-42ce-9f6b-1a4e8f445ffd.png"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 <img width="300" alt="Screenshot 2022-01-13 at 2 23 16 PM" src="https://user-images.githubusercontent.com/97294110/149318468-8381c648-e5fd-4d5f-8b88-b1cf9d497dad.png">
+</p>
 
+<br>
 
-<img width="300" alt="Screenshot 2022-01-13 at 2 23 16 PM" src="https://user-images.githubusercontent.com/97294110/149318807-aa6b6662-2c63-46a2-95ee-4e6e3016548d.png">
-
+<p float="left">
+<img width="300" alt="Screenshot 2022-01-13 at 2 23 16 PM" src="https://user-images.githubusercontent.com/97294110/149318807-aa6b6662-2c63-46a2-95ee-4e6e3016548d.png"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 <img width="300" alt="Screenshot 2022-01-13 at 2 23 16 PM" src="https://user-images.githubusercontent.com/97294110/149318897-6c272cba-c87f-4d69-a8ec-97af51290079.png">
-
+</p>
 
 
 
