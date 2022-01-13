@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="status_iq_white">#FFFFFF</color>
+    <color name="status_iq_black">#000000</color>
+    <color name="status_iq_bg">#F5F5F5</color>
+    <color name="status_iq_show_more_text_color">#007AFF</color>
+    <color name="status_iq_sub_component_bg">#F9F9F9</color>
+    <color name="status_iq_light_text">#8A000000</color>
+
+
+    <color name="status_iq_operational_bg">#8AB455</color>
+    <color name="status_iq_maintenance_bg">#438BCE</color>
+    <color name="status_iq_degraded_bg">#FFBB04</color>
+    <color name="status_iq_outage_bg">#F97260</color>
+    <color name="status_iq_partial_outage_bg">#E99500</color>
+    <color name="status_iq_informational">#8B8B8B</color>
+    <color name="status_iq_single_component_date_bg">#EDEBEB</color>
+    <color name="status_iq_action_bar_colour">#192731</color>
+
+
+</resources>

@@ -1,0 +1,36 @@
+<resources>
+
+    <string name="status_Iq_Base_Url_Not_Found">Status IQ Base URL not found</string>
+    <string name="network_error">Network Error</string>
+    <string name="active_incident">Active Incidents</string>
+    <string name="incident_start_time">Incident Start Time</string>
+    <string name="show_more">Show more</string>
+    <string name="affected_components">Affected Components</string>
+    <string name="less">Less</string>
+    <string name="incident_status_updates">Incident Status Updates</string>
+    <string name="posted_on">Posted on </string>
+    <string name="this_incident_has_been_open_for">This incident has been open for </string>
+    <string name="component_summary">Component Summary</string>
+    <string name="incident_history">Incident History</string>
+    <string name="operational">Operational</string>
+    <string name="under_maintenance">Under Maintenance</string>
+    <string name="informational">Informational</string>
+    <string name="degraded_performance">Degraded Performance</string>
+    <string name="partial_outage">Partial Outage</string>
+    <string name="major_outage">Major Outage</string>
+    <string name="incident_duration">Incident Duration</string>
+    <string name="no_incident_has_been_reported">No incidents have been reported.</string>
+    <string name="last_checked">Last Checked - </string>
+    <string name="component_status_history">Component Status History</string>
+    <string name="up_time">Up Time</string>
+    <string name="incident_count">Incident Count</string>
+    <string name="last_seven_days">Last 7 Days</string>
+    <string name="last_checked_ago">  %1$s ago</string>
+    <string name="provide_a_component_name">Please provide a component name</string>
+    <string name="no_such_status_page_available">There is no such status page available</string>
+
+
+</resources>
+
+
+

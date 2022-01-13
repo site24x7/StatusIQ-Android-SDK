@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_small"
+    android:background="@drawable/status_iq_round_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.zoho.statusiqsdk.Utils.StatusIQTextView
+            android:id="@+id/tv_incident_name"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/status_iq_outage_bg"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/margin_medium"
+            android:textColor="@color/status_iq_white"
+            android:textSize="@dimen/text_medium"
+            android:textStyle="bold"
+            tools:text="Third active Incident" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_small"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_small">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.zoho.statusiqsdk.Utils.StatusIQTextView
+                    android:id="@+id/tv_incident_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:lineSpacingExtra="@dimen/text_spacing"
+                    android:textSize="@dimen/text_small"
+                    tools:text="Sample content for active incident " />
+
+                <com.zoho.statusiqsdk.Utils.StatusIQTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_max"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:text="@string/incident_start_time"
+                    android:textColor="@color/status_iq_black"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold" />
+
+                <com.zoho.statusiqsdk.Utils.StatusIQTextView
+                    android:id="@+id/tv_incident_start_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="started on oct 2021"
+                    android:textColor="@color/status_iq_light_text"
+                    android:textSize="@dimen/text_min" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_collapsable_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.zoho.statusiqsdk.Utils.StatusIQTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_max"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:text="@string/affected_components"
+                    android:textColor="@color/status_iq_black"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold" />
+
+                <com.zoho.statusiqsdk.Utils.StatusIQTextView
+                    android:id="@+id/tv_affected_components"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+                <com.zoho.statusiqsdk.Utils.StatusIQTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_max"
+                    android:layout_marginBottom="@dimen/sub_component_margin"
+                    android:text="@string/incident_status_updates"
+                    android:textColor="@color/status_iq_black"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/incident_status_updates_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_show_more"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/margin_small"
+                android:text="@string/show_more"
+                android:textColor="@color/status_iq_show_more_text_color" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
