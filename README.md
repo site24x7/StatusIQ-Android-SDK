@@ -3,7 +3,7 @@ Accessing services from anywhere at any time has been made possible with mobile 
 In this context, a public status page like StatusIQ can help you post real-time updates to keep your customers informed about your active incidents or scheduled maintenance. It also lets you publish postmortem reports and do much more. You can integrate your mobile applications with StatusIQ to help users track service status updates.
 The StatusIQ Android SDK is a free module for StatusIQ. The perk is that you can integrate the StatusIQ Android SDK with your company's mobile app and showcase your real-time service availability to clients. The integration also provides various customization options, like changing the font and colors.
 
-Steps to integrate the StatusIQ Android SDK into your business app
+**Steps to integrate the StatusIQ Android SDK into your business app**
 
 1. Import the StatusIQ Android SDK into your business app by cloning the source code or by including the StatusIQ SDK.aar.
 
@@ -31,16 +31,16 @@ To customize, use the StatusIq.setTheme() method before using the StatusIq.openS
 <img width="790" alt="Screenshot 2022-01-13 at 2 23 16 PM" src="https://user-images.githubusercontent.com/97294110/149297522-ac96c38d-4854-4df7-8356-488c324ada73.png">
 
 
-![Screenshot_20211227-123138_Status IQ SDK](https://user-images.githubusercontent.com/97294110/149298835-e47b437f-b9c9-4b45-bf68-3fbd45848ba8.jpg)
+<img width="300" height="500" alt="Screenshot 2022-01-13 at 2 23 16 PM" src="https://user-images.githubusercontent.com/97294110/149318278-803dedb8-72e7-42ce-9f6b-1a4e8f445ffd.png">
 
 
-![i01_Screenshot_20220106-154356_Status IQ SDK](https://user-images.githubusercontent.com/97294110/149298880-41974769-5c43-43ca-a770-e860633020c2.jpg)
+<img width="300" height="500" alt="Screenshot 2022-01-13 at 2 23 16 PM" src="https://user-images.githubusercontent.com/97294110/149318468-8381c648-e5fd-4d5f-8b88-b1cf9d497dad.png">
 
 
-![i01_Screenshot_20220106-154435_Status IQ SDK](https://user-images.githubusercontent.com/97294110/149298902-42f384f0-bc04-4626-908f-c0c22ac22999.jpg)
+<img width="300" height="500" alt="Screenshot 2022-01-13 at 2 23 16 PM" src="https://user-images.githubusercontent.com/97294110/149318807-aa6b6662-2c63-46a2-95ee-4e6e3016548d.png">
 
 
-![i01_Screenshot_20220106-161328_Status IQ SDK](https://user-images.githubusercontent.com/97294110/149298928-6aa9a89d-9846-4b8d-b978-2fc12808a526.jpg)
+<img width="300" height="500" alt="Screenshot 2022-01-13 at 2 23 16 PM" src="https://user-images.githubusercontent.com/97294110/149318897-6c272cba-c87f-4d69-a8ec-97af51290079.png">
 
 
 
