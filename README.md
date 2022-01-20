@@ -3,11 +3,49 @@ Accessing services from anywhere at any time has been made possible with mobile 
 In this context, a public status page like StatusIQ can help you post real-time updates to keep your customers informed about your active incidents or scheduled maintenance. It also lets you publish postmortem reports and do much more. You can integrate your mobile applications with StatusIQ to help users track service status updates.
 The StatusIQ Android SDK is a free module for StatusIQ. The perk is that you can integrate the StatusIQ Android SDK with your company's mobile app and showcase your real-time service availability to clients. The integration also provides various customization options, like changing the font and colors.
 
+
+## How to customize the StatusIQ Framework
+
+You can customize the user interface for the StatusIQ Framework to suit your application theme. 
+
+To customize, use the StatusIq.setTheme() method before using the StatusIq.openStatusIqActivity() method. You can customize various aspects, like font, text color, and background color, by passing the custom theme.
+
+
+```kotlin
+
+      StatusIq.setTheme(R.style.Theme_StatusIQSDK)
+      StatusIq.openStatusIqActivity(this@MainActivity, "Service status")
+
+```
+
+```xml
+
+     <style name="Theme.StatusIQSDK" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+       
+        <!-- Customize your theme here. -->
+
+        <!-- Primary color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="textAllCaps">true</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+
+       
+     </style>
+
+```
+
 ## Steps to integrate the StatusIQ Android SDK into your business app
 
 1. Import the StatusIQ Android SDK into your business app by cloning the source code or by including the StatusIQ SDK.aar.
 
-   **Note: If you are importing the SDK as a .arr file, ensure that your app level build.gradle contains the following dependencies**
+   **Note:** If you are importing the SDK as a .arr file, ensure that your app level build.gradle contains the following dependencies.
 
 ```groovy
 
@@ -66,43 +104,6 @@ The StatusIQ Android SDK is a free module for StatusIQ. The perk is that you can
 ```kotlin
 
       StatusIq.openStatusIqActivity(this@MainActivity, "Service status")
-
-```
-
-## How to customize the StatusIQ Framework
-
-You can customize the user interface for the StatusIQ Framework to suit your application theme. 
-
-To customize, use the StatusIq.setTheme() method before using the StatusIq.openStatusIqActivity() method. You can customize various aspects, like font, text color, and background color, by passing the custom theme.
-
-
-```kotlin
-
-      StatusIq.setTheme(R.style.Theme_StatusIQSDK)
-      StatusIq.openStatusIqActivity(this@MainActivity, "Service status")
-
-```
-
-```xml
-
-     <style name="Theme.StatusIQSDK" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-       
-        <!-- Customize your theme here. -->
-
-        <!-- Primary color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <!-- Secondary color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_700</item>
-        <item name="colorOnSecondary">@color/black</item>
-        <item name="textAllCaps">true</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-
-       
-     </style>
 
 ```
 
