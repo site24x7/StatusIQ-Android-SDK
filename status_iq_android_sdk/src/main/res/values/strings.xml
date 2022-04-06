@@ -1,6 +1,6 @@
 <resources>
 
-    <string name="status_Iq_Base_Url_Not_Found">Status IQ Base URL not found</string>
+    <string name="status_Iq_Base_Url_Not_Found">Status page base URL not found</string>
     <string name="network_error">Network Error</string>
     <string name="active_incident">Active Incidents</string>
     <string name="incident_start_time">Incident Start Time</string>

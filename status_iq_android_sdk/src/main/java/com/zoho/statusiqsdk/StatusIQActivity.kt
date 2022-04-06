@@ -44,6 +44,10 @@ internal class StatusIQActivity : AppCompatActivity() {
     lateinit var baseResponse: JSONObject
     var singleComponentResponseBody: JSONObject? = null
     var isStatusPageAvailable = false
+    var StatusIQ_resId = 0
+    var dynamicBaseUrl: String? = null
+    private var showSingleComponent: Boolean? = null
+    private var componentName: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
@@ -58,24 +62,40 @@ internal class StatusIQActivity : AppCompatActivity() {
             supportActionBar?.setDisplayHomeAsUpEnabled(true)
             actionBarTitle = intent.getStringExtra(Constants.ACTION_BAR_TITLE)!!
 
-
             setActionBarTitle(actionBarTitle)
             statusIQTv = findViewById(R.id.tv_status)
             progressBar = findViewById(R.id.pg_bar)
 
-            val StatusIQ_resId = applicationContext.resources.getIdentifier(
-                Constants.STATUS_IQ_URL,
-                Constants.DEF_TYPE_STRING,
-                applicationContext.packageName
-            )
+
+            if (intent.hasExtra(Constants.STATUS_IQ_URL)) {
+                dynamicBaseUrl = intent.getStringExtra(Constants.STATUS_IQ_URL)
+
+                if (intent.hasExtra(Constants.SHOW_SINGLE_COMPONENT)) {
+                    showSingleComponent =
+                        intent.getBooleanExtra(Constants.SHOW_SINGLE_COMPONENT, false)
+                    componentName = intent.getStringExtra(Constants.COMPONENT_NAME)
+
+                }
+            } else {
+                StatusIQ_resId = applicationContext.resources.getIdentifier(
+                    Constants.STATUS_IQ_URL,
+                    Constants.DEF_TYPE_STRING,
+                    applicationContext.packageName
+                )
+            }
 
 
-            if (StatusIQ_resId <= 0) {
+            if (StatusIQ_resId <= 0 && dynamicBaseUrl.isNullOrEmpty()) {
                 statusIQTv.visibility = View.VISIBLE
                 statusIQTv.setText(R.string.status_Iq_Base_Url_Not_Found)
                 return
             } else {
-                statusIqBaseUrl = getString(StatusIQ_resId);
+
+                if (dynamicBaseUrl.isNullOrEmpty()) {
+                    statusIqBaseUrl = getString(StatusIQ_resId)
+                } else {
+                    statusIqBaseUrl = dynamicBaseUrl!!
+                }
 
                 progressBar.visibility = View.VISIBLE
 
@@ -86,33 +106,52 @@ internal class StatusIQActivity : AppCompatActivity() {
                     override fun onResponse(call: Call<String>, response: Response<String>) {
 
                         if (response.isSuccessful) {
-                            baseResponse =
-                                JSONObject(response.body().toString()).optJSONObject(Constants.DATA)
+                            baseResponse = JSONObject(response.body().toString()).optJSONObject(Constants.DATA)
 
-
-                            val showSingleComponent = applicationContext.resources.getIdentifier(
-                                Constants.SHOW_SINGLE_COMPONENT,
-                                Constants.DEF_TYPE_STRING,
-                                applicationContext.packageName
-                            )
-
-
-                            if (showSingleComponent > 0 && getString(showSingleComponent).equals("1")) {
-
-                                if (applicationContext.resources.getIdentifier(
-                                        Constants.COMPONENT_NAME,
+                            if (showSingleComponent==null && componentName == null && dynamicBaseUrl==null) {
+                                val showSingleComponentResId =
+                                    applicationContext.resources.getIdentifier(
+                                        Constants.SHOW_SINGLE_COMPONENT,
                                         Constants.DEF_TYPE_STRING,
                                         applicationContext.packageName
-                                    ) > 0
-                                ) {
+                                    )
 
-                                    val componentName = getString(
-                                        applicationContext.resources.getIdentifier(
+                                if (showSingleComponentResId > 0 && getString(
+                                        showSingleComponentResId
+                                    ).equals("1")
+                                ) {
+                                    showSingleComponent=true
+                                    if (applicationContext.resources.getIdentifier(
                                             Constants.COMPONENT_NAME,
                                             Constants.DEF_TYPE_STRING,
                                             applicationContext.packageName
+                                        ) > 0
+                                    ) {
+
+                                        componentName = getString(
+                                            applicationContext.resources.getIdentifier(
+                                                Constants.COMPONENT_NAME,
+                                                Constants.DEF_TYPE_STRING,
+                                                applicationContext.packageName
+                                            )
                                         )
-                                    )
+                                    }
+
+                                }
+
+                            }
+
+
+                            if (showSingleComponent!=null && showSingleComponent!!) {
+
+                                if (componentName.isNullOrEmpty()) {
+
+                                    progressBar.visibility = View.GONE
+                                    statusIQTv.visibility = View.VISIBLE
+                                    statusIQTv.setText(R.string.provide_a_component_name)
+
+
+                                } else {
 
                                     val currentStatusArray =
                                         baseResponse.optJSONArray(Constants.CURRENT_STATUS)
@@ -173,13 +212,6 @@ internal class StatusIQActivity : AppCompatActivity() {
                                         }
                                     }
 
-
-                                } else {
-
-                                    statusIQTv.visibility = View.VISIBLE
-                                    statusIQTv.setText(R.string.provide_a_component_name)
-
-
                                 }
                             } else {
                                 progressBar.visibility = View.GONE
@@ -196,7 +228,10 @@ internal class StatusIQActivity : AppCompatActivity() {
 
 
                                     supportFragmentManager.beginTransaction()
-                                        .replace(R.id.fragment_container_view, incidentHistoryFragment)
+                                        .replace(
+                                            R.id.fragment_container_view,
+                                            incidentHistoryFragment
+                                        )
                                         .commit()
 
                                 } else {
@@ -228,11 +263,10 @@ internal class StatusIQActivity : AppCompatActivity() {
 
 
             }
-        }
-        catch (e: Exception){
+        } catch (e: Exception) {
 
-            progressBar.visibility=View.GONE
-            statusIQTv.visibility=View.VISIBLE
+            progressBar.visibility = View.GONE
+            statusIQTv.visibility = View.VISIBLE
             statusIQTv.setText(e.localizedMessage)
 
         }
@@ -271,10 +305,11 @@ internal class StatusIQActivity : AppCompatActivity() {
                     bundle.putString(Constants.DATA, singleComponentResponseBody?.toString())
                     singleComponentFragment.arguments = bundle
 
-                    supportFragmentManager.beginTransaction()
-                        .replace(R.id.fragment_container_view, singleComponentFragment)
-                        .commit()
-
+                    if(!this@StatusIQActivity.isFinishing && !isDestroyed()){
+                        supportFragmentManager.beginTransaction()
+                            .replace(R.id.fragment_container_view, singleComponentFragment)
+                            .commit()
+                    }
 
                 }
             }

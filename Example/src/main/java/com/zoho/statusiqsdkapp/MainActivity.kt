@@ -126,9 +126,9 @@ class MainActivity : AppCompatActivity(), OnClickListener {
 
                 drawer.closeDrawers()
 
-
                 StatusIq.setTheme(R.style.Theme_StatusIQSDK)
-                StatusIq.openStatusIqActivity(this@MainActivity, "Service status")
+//                StatusIq.openStatusIqActivity(this@MainActivity, "Service status")
+                StatusIq.openStatusIqActivity(this@MainActivity, "Service status","https://status.site24x7.com",true,"Site24x7 StatusIQ")
 
 
             }

@@ -25,7 +25,7 @@ class StatusIq {
 
     companion object {
 
-        internal var themeResId:Int ?=null
+        internal var themeResId: Int? = null
 
         @JvmStatic
         fun openStatusIqActivity(
@@ -39,6 +39,7 @@ class StatusIq {
             )
 
             intent.putExtra(Constants.ACTION_BAR_TITLE, actionBarTitle)
+
             context.startActivity(
                 intent
             )
@@ -46,8 +47,52 @@ class StatusIq {
 
         @JvmStatic
         fun setTheme(themeStyleResId: Int) {
-            themeResId=themeStyleResId
+            themeResId = themeStyleResId
         }
+
+
+        @JvmStatic
+        fun openStatusIqActivity(
+            context: Context,
+            actionBarTitle: String = "Status IQ", statusPageUrl: String
+        ) {
+
+            val intent = Intent(
+                context,
+                StatusIQActivity::class.java
+            )
+
+            intent.putExtra(Constants.ACTION_BAR_TITLE, actionBarTitle)
+
+            intent.putExtra(Constants.STATUS_IQ_URL, statusPageUrl)
+
+            context.startActivity(
+                intent
+            )
+        }
+
+
+        @JvmStatic
+        fun openStatusIqActivity(
+            context: Context,
+            actionBarTitle: String = "Status IQ", statusPageUrl: String,showSingleComponent: Boolean,componentName: String
+        ) {
+
+            val intent = Intent(
+                context,
+                StatusIQActivity::class.java
+            )
+
+            intent.putExtra(Constants.ACTION_BAR_TITLE, actionBarTitle)
+            intent.putExtra(Constants.STATUS_IQ_URL, statusPageUrl)
+            intent.putExtra(Constants.SHOW_SINGLE_COMPONENT,showSingleComponent)
+            intent.putExtra(Constants.COMPONENT_NAME,componentName)
+
+            context.startActivity(
+                intent
+            )
+        }
+
 
 
 //        @JvmStatic
