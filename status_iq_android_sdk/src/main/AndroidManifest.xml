@@ -3,7 +3,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
-    <application android:theme="@style/Theme.STATUS_IQ">
+    <application>
         <activity
             android:name="com.zoho.statusiqsdk.StatusIQActivity"
             android:exported="false" />
