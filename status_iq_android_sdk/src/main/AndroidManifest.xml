@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.zoho.statusiqsdk">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
-    <application>
-        <activity android:name=".StatusIQActivity" ></activity>
+    <application
+        android:theme="@style/Theme.BOTTOM_BAR_REVAMP">
+        <activity android:name="com.zoho.statusiqsdk.StatusIQActivity" />
 
     </application>
 

@@ -25,8 +25,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.zoho.statusiqsdk.DatModel.ComponentgroupComponent
 import com.zoho.statusiqsdk.DatModel.CurrentStatus
-import com.zoho.statusiqsdk.R
+import com.zoho.statusiqsdk.StatusIq
 import com.zoho.statusiqsdk.Utils.Util
+import com.zoho.statusiqsdkapp.R
 
 internal class ComponentSummaryListAdapter(val activeIncidentsList: List<CurrentStatus>?) :
     RecyclerView.Adapter<ComponentSummaryListAdapter.ComponentSummaryViewHolder>() {
@@ -49,7 +50,10 @@ internal class ComponentSummaryListAdapter(val activeIncidentsList: List<Current
 
         if (component?.display_name.isNullOrEmpty()) {
 
-            holder.componentName.setText(component?.componentgroup_display_name)
+            StatusIq.textColor?.let {color->
+                holder.componentName.setTextColor(color)
+            }
+            holder.componentName.text = component?.componentgroup_display_name
             holder.imgExpand.visibility = View.VISIBLE
             holder.imgStatus.setImageResource(Util.getStatusImageFromStatusCode(component?.componentgroup_status))
 

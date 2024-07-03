@@ -27,8 +27,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.zoho.statusiqsdk.DatModel.GrpByIncidents
 import com.zoho.statusiqsdk.DatModel.IncidentStatusUpdateX
 import com.zoho.statusiqsdk.DatModel.ResolvedIncidentDetail
-import com.zoho.statusiqsdk.R
 import com.zoho.statusiqsdk.Utils.Util
+import com.zoho.statusiqsdkapp.R
 
 internal class IncidentHistoryListAdapter(val resolvedIncidentList: List<ResolvedIncidentDetail>?) :
     RecyclerView.Adapter<IncidentHistoryListAdapter.IncidentHistoryListViewHolder>() {

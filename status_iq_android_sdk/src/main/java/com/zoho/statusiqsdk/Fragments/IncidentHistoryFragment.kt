@@ -25,8 +25,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.zoho.statusiqsdk.Adapter.IncidentHistoryListAdapter
 import com.zoho.statusiqsdk.Constants
 import com.zoho.statusiqsdk.DatModel.*
-import com.zoho.statusiqsdk.R
 import com.zoho.statusiqsdk.StatusIQActivity
+import com.zoho.statusiqsdkapp.R
 import org.json.JSONObject
 
 internal class IncidentHistoryFragment() : Fragment(R.layout.fragment_incident_history) {

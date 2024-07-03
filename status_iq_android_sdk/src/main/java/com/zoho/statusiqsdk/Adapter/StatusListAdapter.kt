@@ -28,6 +28,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.zoho.statusiqsdk.DatModel.ActiveIncidentDetail
 import com.zoho.statusiqsdk.DatModel.IncidentStatusUpdate
 import com.zoho.statusiqsdk.Utils.Util
+import com.zoho.statusiqsdkapp.R
 import java.util.*
 
 internal class ActiveIncidentsListAdapter(

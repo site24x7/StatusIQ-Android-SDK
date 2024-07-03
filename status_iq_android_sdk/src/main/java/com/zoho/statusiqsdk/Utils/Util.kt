@@ -17,7 +17,7 @@ limitations under the License.*/
 
 package com.zoho.statusiqsdk.Utils
 
-import com.zoho.statusiqsdk.R
+import com.zoho.statusiqsdkapp.R
 import java.text.SimpleDateFormat
 import java.util.*
 

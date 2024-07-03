@@ -23,11 +23,13 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.ProgressBar
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import com.zoho.statusiqsdk.Fragments.IncidentHistoryFragment
 import com.zoho.statusiqsdk.Fragments.SingleComponentFragment
 import com.zoho.statusiqsdk.Fragments.StatusIqFragment
 import com.zoho.statusiqsdk.Utils.RetrofitFactory
 import com.zoho.statusiqsdk.Utils.RetrofitService
+import com.zoho.statusiqsdkapp.R
 import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
@@ -65,7 +67,7 @@ internal class StatusIQActivity : AppCompatActivity() {
             setActionBarTitle(actionBarTitle)
             statusIQTv = findViewById(R.id.tv_status)
             progressBar = findViewById(R.id.pg_bar)
-
+            window.statusBarColor = ContextCompat.getColor(this, R.color.colorPrimary)
 
             if (intent.hasExtra(Constants.STATUS_IQ_URL)) {
                 dynamicBaseUrl = intent.getStringExtra(Constants.STATUS_IQ_URL)

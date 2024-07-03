@@ -5,7 +5,6 @@
     android:background="@color/status_iq_bg"
     >
 
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/incident_history_list"
         android:layout_width="match_parent"

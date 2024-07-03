@@ -27,7 +27,8 @@ import com.zoho.statusiqsdk.ActiveIncidentsListAdapter
 import com.zoho.statusiqsdk.Adapter.ComponentSummaryListAdapter
 import com.zoho.statusiqsdk.Constants
 import com.zoho.statusiqsdk.DatModel.*
-import com.zoho.statusiqsdk.R
+import com.zoho.statusiqsdk.StatusIq
+import com.zoho.statusiqsdkapp.R
 import org.json.JSONObject
 
 internal class StatusIqFragment() : Fragment(R.layout.fragment_status_iq) {
@@ -35,6 +36,7 @@ internal class StatusIqFragment() : Fragment(R.layout.fragment_status_iq) {
     private lateinit var activeIncidentsList: RecyclerView
     private lateinit var componentSummaryList: RecyclerView
     private lateinit var statusPageLinearLayout: LinearLayout
+    private lateinit var statusIqBackground: LinearLayout
     private lateinit var labelActiveIncident: TextView
     private lateinit var labelComponentSummary: TextView
 
@@ -45,6 +47,7 @@ internal class StatusIqFragment() : Fragment(R.layout.fragment_status_iq) {
         activeIncidentsList = view.findViewById(R.id.active_incidents_list)
         componentSummaryList = view.findViewById(R.id.component_summary_list)
         statusPageLinearLayout = view.findViewById(R.id.ll_status_page)
+        statusIqBackground = view.findViewById(R.id.status_iq_background)
         activeIncidentsList.layoutManager = LinearLayoutManager(activity)
         labelActiveIncident = view.findViewById(R.id.label_active_incident)
         labelComponentSummary = view.findViewById(R.id.label_component_summary)
@@ -52,11 +55,14 @@ internal class StatusIqFragment() : Fragment(R.layout.fragment_status_iq) {
 
         val baseResponse = JSONObject(arguments?.getString(Constants.DATA))
 
-
         val activeIncidentJsonArray =
             baseResponse.optJSONArray(Constants.ACTIVE_INCIDENT_DETAILS)
 
         val activeIncidentList = ArrayList<ActiveIncidentDetail>()
+
+        StatusIq.cardBackgroundColor?.let {color->
+            statusIqBackground.setBackgroundColor(color)
+        }
 
         if (activeIncidentJsonArray.length() > 0) {
 
@@ -178,9 +184,7 @@ internal class StatusIqFragment() : Fragment(R.layout.fragment_status_iq) {
                         currenStatusJsonObject.optString(Constants.site24x7_monitor_type)
                     )
                 )
-
             }
-
 
             componentSummaryList.adapter =
                 ComponentSummaryListAdapter(

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#FF000000</color>
+    <color name="navigation_green">#74BF01</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="status_iq_bg">#FF000000</color>
+    <color name="card_background">#282828</color>
+
+</resources>

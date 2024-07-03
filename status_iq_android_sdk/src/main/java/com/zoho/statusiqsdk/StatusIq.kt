@@ -26,6 +26,8 @@ class StatusIq {
     companion object {
 
         internal var themeResId: Int? = null
+        internal var textColor: Int? = null
+        internal var cardBackgroundColor: Int? = null
 
         @JvmStatic
         fun openStatusIqActivity(
@@ -48,6 +50,12 @@ class StatusIq {
         @JvmStatic
         fun setTheme(themeStyleResId: Int) {
             themeResId = themeStyleResId
+        }
+
+        @JvmStatic
+        fun setColors(textColorValue: Int, cardBackgroundColorValue: Int) {
+            textColor = textColorValue
+            cardBackgroundColor = cardBackgroundColorValue
         }
 
 

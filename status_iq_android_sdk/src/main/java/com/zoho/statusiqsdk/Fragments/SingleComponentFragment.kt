@@ -22,8 +22,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.zoho.statusiqsdk.Constants
-import com.zoho.statusiqsdk.R
 import com.zoho.statusiqsdk.Utils.Util
+import com.zoho.statusiqsdkapp.R
 import org.json.JSONObject
 import java.lang.String
 import java.util.*
