@@ -128,6 +128,7 @@ class MainActivity : AppCompatActivity(), OnClickListener {
 
                 StatusIq.setTheme(R.style.Theme_StatusIQSDK)
                 StatusIq.openStatusIqActivity(this@MainActivity, "Service status")
+                StatusIq.setColors(R.color.black, R.color.white)
 //                StatusIq.openStatusIqActivity(this@MainActivity, "Service status","https://status.site24x7.com",true,"Site24x7 StatusIQ")
 
 

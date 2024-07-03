@@ -7,7 +7,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.BOTTOM_BAR_REVAMP">
+        android:theme="@style/Theme.STATUS_IQ">
         <activity
             android:name=".ActivityCloudComputing"
             android:exported="true" />

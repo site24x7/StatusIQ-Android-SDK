@@ -3,9 +3,10 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
-    <application
-        android:theme="@style/Theme.BOTTOM_BAR_REVAMP">
-        <activity android:name="com.zoho.statusiqsdk.StatusIQActivity" />
+    <application android:theme="@style/Theme.STATUS_IQ">
+        <activity
+            android:name="com.zoho.statusiqsdk.StatusIQActivity"
+            android:exported="false" />
 
     </application>
 
