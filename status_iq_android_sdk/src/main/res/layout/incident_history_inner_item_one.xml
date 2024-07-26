@@ -17,6 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingHorizontal="@dimen/margin_medium"
+        android:textColor="?attr/textColor"
         android:paddingTop="@dimen/margin_medium"
         android:textSize="@dimen/text_medium"
         tools:text="Zylker is Down"
@@ -29,9 +30,9 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/margin_medium"
         android:text="@string/incident_duration"
-        android:textColor="@color/status_iq_black"
+        android:textColor="?attr/textColor"
         android:layout_marginTop="@dimen/margin_max"
-        android:layout_marginBottom="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_small"
         android:textSize="@dimen/text_medium"
         android:textStyle="bold" />
 
@@ -39,7 +40,7 @@
         android:id="@+id/tv_incident_duration"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/status_iq_light_text"
+        android:textColor="?attr/textColor"
         android:layout_marginHorizontal="@dimen/margin_medium"
         android:lineSpacingExtra="@dimen/text_spacing"
         android:textSize="@dimen/text_min"
@@ -51,9 +52,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_max"
         android:layout_marginHorizontal="@dimen/margin_medium"
-        android:layout_marginBottom="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_small"
         android:text="@string/affected_components"
-        android:textColor="@color/status_iq_black"
+        android:textColor="?attr/textColor"
         android:textSize="@dimen/text_medium"
         android:textStyle="bold" />
 
@@ -72,7 +73,7 @@
         android:layout_marginHorizontal="@dimen/margin_medium"
         android:layout_marginTop="@dimen/margin_max"
         android:text="@string/incident_status_updates"
-        android:textColor="@color/status_iq_black"
+        android:textColor="?attr/textColor"
         android:textSize="@dimen/text_medium"
         android:textStyle="bold" />
 

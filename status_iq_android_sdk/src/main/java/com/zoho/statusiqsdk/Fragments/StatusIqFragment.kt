@@ -39,6 +39,7 @@ internal class StatusIqFragment() : Fragment(R.layout.fragment_status_iq) {
     private lateinit var statusIqBackground: LinearLayout
     private lateinit var labelActiveIncident: TextView
     private lateinit var labelComponentSummary: TextView
+    private lateinit var viewSeparator: View
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -51,6 +52,7 @@ internal class StatusIqFragment() : Fragment(R.layout.fragment_status_iq) {
         activeIncidentsList.layoutManager = LinearLayoutManager(activity)
         labelActiveIncident = view.findViewById(R.id.label_active_incident)
         labelComponentSummary = view.findViewById(R.id.label_component_summary)
+        viewSeparator = view.findViewById(R.id.view_separator)
 
 
         val baseResponse = JSONObject(arguments?.getString(Constants.DATA))
@@ -59,10 +61,6 @@ internal class StatusIqFragment() : Fragment(R.layout.fragment_status_iq) {
             baseResponse.optJSONArray(Constants.ACTIVE_INCIDENT_DETAILS)
 
         val activeIncidentList = ArrayList<ActiveIncidentDetail>()
-
-        StatusIq.cardBackgroundColor?.let {color->
-            statusIqBackground.setBackgroundColor(color)
-        }
 
         if (activeIncidentJsonArray.length() > 0) {
 
@@ -132,6 +130,7 @@ internal class StatusIqFragment() : Fragment(R.layout.fragment_status_iq) {
         } else {
             labelActiveIncident.visibility = View.GONE
             activeIncidentsList.visibility = View.GONE
+            viewSeparator.visibility = View.GONE
         }
 
         componentSummaryList.layoutManager = LinearLayoutManager(activity)
@@ -187,9 +186,12 @@ internal class StatusIqFragment() : Fragment(R.layout.fragment_status_iq) {
             }
 
             componentSummaryList.adapter =
-                ComponentSummaryListAdapter(
-                    listCurrentStatus
-                )
+                context?.let {
+                    ComponentSummaryListAdapter(
+                        it,
+                        listCurrentStatus
+                    )
+                }
         } else {
             labelComponentSummary.visibility = View.GONE
             componentSummaryList.visibility = View.GONE

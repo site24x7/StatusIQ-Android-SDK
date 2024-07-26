@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="zero_dp">0dp</dimen>
     <dimen name="margin_medium">16dp</dimen>
     <dimen name="elevation">8dp</dimen>
     <dimen name="progress_bar_size">25dp</dimen>

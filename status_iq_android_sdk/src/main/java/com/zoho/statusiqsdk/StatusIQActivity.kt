@@ -16,13 +16,15 @@ limitations under the License.*/
 
 package com.zoho.statusiqsdk
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Html
+import android.util.TypedValue
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.ProgressBar
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.zoho.statusiqsdk.Fragments.IncidentHistoryFragment
 import com.zoho.statusiqsdk.Fragments.SingleComponentFragment
@@ -34,7 +36,6 @@ import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import java.lang.Exception
 
 
 internal class StatusIQActivity : AppCompatActivity() {
@@ -67,14 +68,16 @@ internal class StatusIQActivity : AppCompatActivity() {
             setActionBarTitle(actionBarTitle)
             statusIQTv = findViewById(R.id.tv_status)
             progressBar = findViewById(R.id.pg_bar)
-            window.statusBarColor = ContextCompat.getColor(this, R.color.colorPrimary)
+
+            val typedValue = TypedValue()
+            theme.resolveAttribute(R.attr.statusBarColor, typedValue, true);
+            window.statusBarColor = ContextCompat.getColor(this,typedValue.resourceId)
 
             if (intent.hasExtra(Constants.STATUS_IQ_URL)) {
                 dynamicBaseUrl = intent.getStringExtra(Constants.STATUS_IQ_URL)
 
                 if (intent.hasExtra(Constants.SHOW_SINGLE_COMPONENT)) {
-                    showSingleComponent =
-                        intent.getBooleanExtra(Constants.SHOW_SINGLE_COMPONENT, false)
+                    showSingleComponent = intent.getBooleanExtra(Constants.SHOW_SINGLE_COMPONENT, false)
                     componentName = intent.getStringExtra(Constants.COMPONENT_NAME)
 
                 }
@@ -142,7 +145,6 @@ internal class StatusIQActivity : AppCompatActivity() {
                                 }
 
                             }
-
 
                             if (showSingleComponent!=null && showSingleComponent!!) {
 
@@ -215,7 +217,8 @@ internal class StatusIQActivity : AppCompatActivity() {
                                     }
 
                                 }
-                            } else {
+                            }
+                            else {
                                 progressBar.visibility = View.GONE
 
                                 val fragment =
@@ -244,7 +247,7 @@ internal class StatusIQActivity : AppCompatActivity() {
 
                                     supportFragmentManager.beginTransaction()
                                         .replace(R.id.fragment_container_view, statusIqFragment)
-                                        .commit()
+                                        .commitAllowingStateLoss()
 
                                 }
 
@@ -379,7 +382,8 @@ internal class StatusIQActivity : AppCompatActivity() {
 
 
     fun setActionBarTitle(title: String) {
-        supportActionBar?.setTitle(title)
+        supportActionBar?.title = Html.fromHtml("<b>$title</b>", 0)
+//        supportActionBar?.setBackgroundDrawable(ColorDrawable(Color.parseColor("attribute/statusBarColor")));
     }
 
 }

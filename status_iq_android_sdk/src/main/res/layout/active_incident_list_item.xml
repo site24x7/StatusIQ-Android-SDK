@@ -3,12 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="@dimen/margin_small"
+    app:cardCornerRadius="5dp"
     android:background="@drawable/status_iq_round_bg">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="?attr/incidentItemCardBackgroundColor"
         android:orientation="vertical">
 
         <com.zoho.statusiqsdk.Utils.StatusIQTextView
@@ -19,7 +22,7 @@
             android:background="@color/status_iq_outage_bg"
             android:gravity="center_vertical"
             android:paddingStart="@dimen/margin_medium"
-            android:textColor="@color/status_iq_white"
+            android:textColor="?attr/textColor"
             android:textSize="@dimen/text_medium"
             android:textStyle="bold"
             tools:text="Third active Incident" />
@@ -43,6 +46,7 @@
                     android:layout_marginTop="@dimen/margin_medium"
                     android:lineSpacingExtra="@dimen/text_spacing"
                     android:textSize="@dimen/text_small"
+                    android:textColor="?attr/textColor"
                     tools:text="Sample content for active incident " />
 
                 <com.zoho.statusiqsdk.Utils.StatusIQTextView
@@ -51,7 +55,7 @@
                     android:layout_marginTop="@dimen/margin_max"
                     android:layout_marginBottom="@dimen/margin_small"
                     android:text="@string/incident_start_time"
-                    android:textColor="@color/status_iq_black"
+                    android:textColor="?attr/textColor"
                     android:textSize="@dimen/text_medium"
                     android:textStyle="bold" />
 
@@ -60,7 +64,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:text="started on oct 2021"
-                    android:textColor="@color/status_iq_light_text"
+                    android:textColor="?attr/textColor"
                     android:textSize="@dimen/text_min" />
 
             </LinearLayout>
@@ -78,7 +82,7 @@
                     android:layout_marginTop="@dimen/margin_max"
                     android:layout_marginBottom="@dimen/margin_small"
                     android:text="@string/affected_components"
-                    android:textColor="@color/status_iq_black"
+                    android:textColor="?attr/textColor"
                     android:textSize="@dimen/text_medium"
                     android:textStyle="bold" />
 
@@ -111,6 +115,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
+                android:layout_marginTop="8dp"
                 android:padding="@dimen/margin_small"
                 android:text="@string/show_more"
                 android:textColor="@color/status_iq_show_more_text_color" />

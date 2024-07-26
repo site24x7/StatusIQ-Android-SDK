@@ -6,16 +6,6 @@
     android:layout_height="wrap_content">
 
 
-    <View
-        android:id="@+id/view_seperator"
-        android:layout_width="match_parent"
-        android:layout_height="0.1dp"
-        android:alpha="0.2"
-        android:background="@color/status_iq_black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
     <ImageView
         android:id="@+id/img_status"
         android:layout_width="wrap_content"
@@ -23,27 +13,27 @@
         android:layout_gravity="center"
         android:layout_marginHorizontal="@dimen/margin_small"
         android:layout_marginStart="@dimen/margin_medium"
-        android:layout_marginTop="@dimen/status_iq_margin"
+        android:paddingTop="@dimen/margin_medium"
+        android:paddingBottom="@dimen/margin_medium"
         android:src="@drawable/status_iq_major_outage"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view_seperator" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <com.zoho.statusiqsdk.Utils.StatusIQTextView
         android:id="@+id/tv_component_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_small"
-        android:paddingVertical="@dimen/margin_medium"
         android:paddingStart="@dimen/sub_component_margin"
+        android:paddingTop="@dimen/margin_medium"
         android:paddingEnd="@dimen/sub_component_margin"
-        android:textColor="@color/status_iq_black"
+        android:paddingBottom="@dimen/margin_medium"
+        android:textColor="?attr/textColor"
         android:textSize="@dimen/text_medium"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@id/ll_status"
-        app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toEndOf="@id/img_status"
-        app:layout_constraintTop_toBottomOf="@id/view_seperator"
+        app:layout_constraintTop_toTopOf="parent"
         tools:text="Home-Page" />
 
 
@@ -52,21 +42,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="@dimen/margin_medium"
+        android:paddingStart="@dimen/margin_medium"
+        android:paddingTop="@dimen/margin_medium"
+        android:paddingEnd="20dp"
+        android:paddingBottom="@dimen/margin_medium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
 
         <ImageView
             android:id="@+id/img_expand"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:padding="@dimen/margin_medium"
-            android:src="@drawable/status_iq_arrow_down" />
+            android:src="@drawable/ic_downarrow" />
 
     </LinearLayout>
 
+
+    <View
+        android:id="@+id/view_seperator"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:alpha="0.2"
+        android:background="?attr/textColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/sub_component_list"
@@ -76,9 +76,7 @@
         android:paddingHorizontal="@dimen/margin_medium"
         android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_component_name"
-
-        />
+        app:layout_constraintTop_toBottomOf="@id/tv_component_name" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

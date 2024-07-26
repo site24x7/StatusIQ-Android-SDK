@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="?attr/incidentItemCardBackgroundColor"
     android:orientation="horizontal">
 
     <ImageView
@@ -11,16 +12,14 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:layout_marginStart="@dimen/margin_large"
-        android:src="@drawable/status_iq_major_outage"
-
-        />
+        android:src="@drawable/status_iq_major_outage" />
 
     <com.zoho.statusiqsdk.Utils.StatusIQTextView
         android:id="@+id/tv_sub_component_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/margin_medium"
-        android:textColor="@color/status_iq_black"
+        android:textColor="?attr/textColor"
         android:layout_gravity="center_vertical"
         android:textSize="@dimen/text_medium"
         tools:text="Home-Page" />

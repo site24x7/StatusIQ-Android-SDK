@@ -6,29 +6,27 @@
     <item name="colorPrimary">@color/white</item>
     <item name="colorPrimaryVariant">@color/white</item>
     <item name="colorOnPrimary">@color/white</item>
-    <item name="android:statusBarColor">@color/white</item>
+    <item name="android:statusBarColor">@color/gray</item>
     <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="Theme.StatusIQSDK" parent="@style/Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/white</item>
         <item name="colorPrimaryDark">@color/black</item>
         <item name="colorAccent">@color/navigation_green</item>
         <item name="colorControlNormal">@android:color/black</item>
         <item name="android:actionMenuTextColor">@color/black</item>
         <item name="windowActionModeOverlay">true</item>
         <item name="android:windowBackground">@color/white</item>
+        <item name="android:statusBarColor">@color/gray</item>
         <item name="android:actionBarItemBackground">@color/white</item>
-<!--        <item name="android:itemTextAppearance">@style/TextAppearance</item>-->
-<!--        <item name="android:textViewStyle">@style/PuviTextViewStyle</item>-->
-<!--        <item name="android:buttonStyle">@style/PuviButtonStyle</item>-->
-<!--        <item name="android:editTextStyle">@style/PuviEditTextStyle</item>-->
-<!--        <item name="android:homeAsUpIndicator">@drawable/ic_back_arrow</item>-->
-<!--        <item name="android:actionOverflowButtonStyle">@style/DotsDarkTheme</item>-->
-<!--        <item name="android:actionBarStyle">@style/DotsDarkTheme</item>-->
     </style>
 
-
-
-
+    <attr name="textColor" format="color"/>
+    <attr name="statusIQCardBackgroundColor" format="color"/>
+    <attr name="incidentHistoryIconColor" format="color"/>
+    <attr name="statusIqBackgroundColor" format="color"/>
+    <attr name="statusBarColor" format="color"/>
+    <attr name="incidentItemCardBackgroundColor" format="color"/>
 
 </resources>

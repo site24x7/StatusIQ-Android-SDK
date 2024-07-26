@@ -4,7 +4,7 @@
     <color name="status_iq_white">#FFFFFF</color>
     <color name="status_iq_black">#000000</color>
     <color name="status_iq_bg">#F5F5F5</color>
-    <color name="status_iq_show_more_text_color">#007AFF</color>
+    <color name="status_iq_show_more_text_color">#2491ff</color>
     <color name="status_iq_sub_component_bg">#F9F9F9</color>
     <color name="status_iq_light_text">#8A000000</color>
     <color name="card_background">#FFFFFF</color>
@@ -23,6 +23,8 @@
     <color name="navigation_green">#74BF01</color>
     <color name="white">#FFFFFFFF</color>
     <color name="colorPrimary">#FFFFFFFF</color>
+    <color name="gray">#E6E6E6</color>
+
 
 
 </resources>

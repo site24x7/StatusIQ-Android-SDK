@@ -26,8 +26,6 @@ class StatusIq {
     companion object {
 
         internal var themeResId: Int? = null
-        internal var textColor: Int? = null
-        internal var cardBackgroundColor: Int? = null
 
         @JvmStatic
         fun openStatusIqActivity(
@@ -53,16 +51,10 @@ class StatusIq {
         }
 
         @JvmStatic
-        fun setColors(textColorValue: Int, cardBackgroundColorValue: Int) {
-            textColor = textColorValue
-            cardBackgroundColor = cardBackgroundColorValue
-        }
-
-
-        @JvmStatic
         fun openStatusIqActivity(
             context: Context,
-            actionBarTitle: String = "Status IQ", statusPageUrl: String
+            actionBarTitle: String = "Status IQ",
+            statusPageUrl: String
         ) {
 
             val intent = Intent(

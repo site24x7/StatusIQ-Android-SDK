@@ -28,8 +28,8 @@
             android:id="@+id/tv_incident_status"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/status_iq_black"
             android:textSize="@dimen/text_medium"
+            android:textColor="?attr/textColor"
             android:layout_marginVertical="@dimen/margin_small"
             android:textStyle="bold" />
 
@@ -38,14 +38,15 @@
             android:layout_width="match_parent"
             android:lineSpacingExtra="6dp"
             android:layout_marginBottom="@dimen/margin_small"
+            android:textColor="?attr/textColor"
             android:layout_height="wrap_content" />
 
         <com.zoho.statusiqsdk.Utils.StatusIQTextView
             android:id="@+id/tv_incident_reported_time"
             android:layout_width="match_parent"
-            android:textColor="@color/status_iq_light_text"
+            android:textColor="?attr/textColor"
             android:textSize="@dimen/text_min"
-            android:layout_marginVertical="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small"
             android:lineSpacingExtra="6dp"
             android:layout_height="wrap_content" />
     </LinearLayout>

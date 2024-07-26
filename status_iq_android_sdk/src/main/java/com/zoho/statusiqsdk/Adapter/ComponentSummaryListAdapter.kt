@@ -16,6 +16,7 @@ limitations under the License.*/
 
 package com.zoho.statusiqsdk.Adapter
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -25,11 +26,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.zoho.statusiqsdk.DatModel.ComponentgroupComponent
 import com.zoho.statusiqsdk.DatModel.CurrentStatus
-import com.zoho.statusiqsdk.StatusIq
 import com.zoho.statusiqsdk.Utils.Util
 import com.zoho.statusiqsdkapp.R
 
-internal class ComponentSummaryListAdapter(val activeIncidentsList: List<CurrentStatus>?) :
+internal class ComponentSummaryListAdapter(val context: Context,val activeIncidentsList: List<CurrentStatus>?) :
     RecyclerView.Adapter<ComponentSummaryListAdapter.ComponentSummaryViewHolder>() {
 
     override fun onCreateViewHolder(
@@ -50,18 +50,15 @@ internal class ComponentSummaryListAdapter(val activeIncidentsList: List<Current
 
         if (component?.display_name.isNullOrEmpty()) {
 
-            StatusIq.textColor?.let {color->
-                holder.componentName.setTextColor(color)
-            }
             holder.componentName.text = component?.componentgroup_display_name
             holder.imgExpand.visibility = View.VISIBLE
             holder.imgStatus.setImageResource(Util.getStatusImageFromStatusCode(component?.componentgroup_status))
 
             if (component?.isExpanded!!) {
                 holder.subComponentList.visibility = View.VISIBLE
-                holder.imgExpand.setImageResource(R.drawable.status_iq_arrow_up)
+                holder.imgExpand.setImageResource(R.drawable.ic_uparrow)
             } else {
-                holder.imgExpand.setImageResource(R.drawable.status_iq_arrow_down)
+                holder.imgExpand.setImageResource(R.drawable.ic_downarrow)
                 holder.subComponentList.visibility = View.GONE
             }
 
