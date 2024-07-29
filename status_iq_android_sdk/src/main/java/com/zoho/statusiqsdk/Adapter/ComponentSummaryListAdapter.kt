@@ -17,11 +17,13 @@ limitations under the License.*/
 package com.zoho.statusiqsdk.Adapter
 
 import android.content.Context
+import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.zoho.statusiqsdk.DatModel.ComponentgroupComponent
@@ -54,11 +56,16 @@ internal class ComponentSummaryListAdapter(val context: Context,val activeIncide
             holder.imgExpand.visibility = View.VISIBLE
             holder.imgStatus.setImageResource(Util.getStatusImageFromStatusCode(component?.componentgroup_status))
 
+            val typedValue = TypedValue()
+            context.theme.resolveAttribute(R.attr.textColor, typedValue, true);
+
             if (component?.isExpanded!!) {
                 holder.subComponentList.visibility = View.VISIBLE
                 holder.imgExpand.setImageResource(R.drawable.ic_uparrow)
+                holder.imgExpand.setColorFilter(ContextCompat.getColor(context,typedValue.resourceId))
             } else {
                 holder.imgExpand.setImageResource(R.drawable.ic_downarrow)
+                holder.imgExpand.setColorFilter(ContextCompat.getColor(context,typedValue.resourceId))
                 holder.subComponentList.visibility = View.GONE
             }
 

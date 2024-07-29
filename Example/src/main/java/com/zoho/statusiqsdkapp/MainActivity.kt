@@ -18,13 +18,13 @@ package com.zoho.statusiqsdkapp
 
 import android.content.Intent
 import android.os.Bundle
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
-import com.google.android.material.navigation.NavigationView
-import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.navigation.NavigationView
 import com.zoho.statusiqsdk.StatusIq
 
 
@@ -128,7 +128,6 @@ class MainActivity : AppCompatActivity(), OnClickListener {
 
                 StatusIq.setTheme(R.style.Theme_StatusIQSDK)
                 StatusIq.openStatusIqActivity(this@MainActivity, "Service status")
-                StatusIq.setColors(R.color.black, R.color.white)
 //                StatusIq.openStatusIqActivity(this@MainActivity, "Service status","https://status.site24x7.com",true,"Site24x7 StatusIQ")
 
 

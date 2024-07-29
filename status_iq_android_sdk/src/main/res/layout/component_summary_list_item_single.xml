@@ -72,8 +72,8 @@
         android:id="@+id/sub_component_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/status_iq_sub_component_bg"
-        android:paddingHorizontal="@dimen/margin_medium"
+        android:background="?attr/incidentItemCardBackgroundColor"
+        android:layout_marginHorizontal="@dimen/margin_medium"
         android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_component_name" />
