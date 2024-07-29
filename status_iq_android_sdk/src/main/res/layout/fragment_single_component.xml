@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/status_iq_bg">
+    android:background="?attr/statusIqBackgroundColor">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -38,7 +38,7 @@
                     android:layout_marginEnd="@dimen/margin_medium"
                     android:layout_marginBottom="@dimen/margin_small"
                     android:layout_toEndOf="@id/img_status"
-                    android:textColor="@color/status_iq_black"
+                    android:textColor="?attr/textColor"
                     android:textSize="@dimen/text_large"
                     android:textStyle="bold"
                     tools:text="Practical-outage" />
@@ -51,7 +51,8 @@
                     android:layout_marginStart="@dimen/margin_medium"
                     android:layout_toEndOf="@id/img_status"
                     android:text="@string/last_checked"
-                    android:textColor="@color/status_iq_light_text" />
+                    android:textColor="?attr/textColor"
+                    />
 
 
                 <com.zoho.statusiqsdk.Utils.StatusIQTextView
@@ -60,7 +61,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/tv_component_name"
                     android:layout_toEndOf="@id/label_last_checked"
-                    android:textColor="@color/status_iq_black"
+                    android:textColor="?attr/textColor"
                     android:textStyle="bold"
                     tools:text=" 186 mins ago" />
 
@@ -79,20 +80,23 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="?attr/statusIQCardBackgroundColor"
                     android:orientation="vertical">
 
                     <com.zoho.statusiqsdk.Utils.StatusIQTextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="?attr/statusIQCardBackgroundColor"
                         android:padding="@dimen/margin_medium"
                         android:text="@string/component_status_history"
-                        android:textColor="@color/status_iq_black"
+                        android:textColor="?attr/textColor"
                         android:textSize="@dimen/text_medium"
                         android:textStyle="bold" />
 
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="?attr/statusIQCardBackgroundColor"
                         android:paddingHorizontal="@dimen/margin_medium">
 
                         <com.zoho.statusiqsdk.Utils.StatusIQTextView
@@ -101,8 +105,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/margin_small"
                             android:text="@string/up_time"
-                            android:textColor="@color/status_iq_light_text"
-
+                            android:textColor="?attr/textColor"
                             />
 
 
@@ -113,7 +116,7 @@
                             android:layout_alignParentEnd="true"
                             android:layout_marginTop="@dimen/margin_small"
                             android:layout_marginEnd="@dimen/margin_medium"
-                            android:textColor="@color/status_iq_black"
+                            android:textColor="?attr/textColor"
                             tools:text="4.3" />
 
 
@@ -124,7 +127,7 @@
                             android:layout_below="@id/label_uptime"
                             android:layout_marginTop="@dimen/margin_medium"
                             android:text="@string/incident_count"
-                            android:textColor="@color/status_iq_light_text"
+                            android:textColor="?attr/textColor"
 
                             />
 
@@ -137,7 +140,7 @@
                             android:layout_alignParentEnd="true"
                             android:layout_marginTop="@dimen/margin_medium"
                             android:layout_marginEnd="@dimen/margin_medium"
-                            android:textColor="@color/status_iq_black"
+                            android:textColor="?attr/textColor"
                             tools:text="4" />
 
                     </RelativeLayout>
@@ -147,7 +150,7 @@
                         android:layout_height="0.1dp"
                         android:layout_marginTop="@dimen/margin_medium"
                         android:alpha="0.3"
-                        android:background="@color/status_iq_black" />
+                        android:background="?attr/textColor" />
 
                     <com.zoho.statusiqsdk.Utils.StatusIQTextView
                         android:layout_width="match_parent"
@@ -156,11 +159,9 @@
                         android:gravity="center_horizontal"
                         android:padding="@dimen/margin_medium"
                         android:text="@string/last_seven_days"
-                        android:textColor="@color/status_iq_black"
+                        android:textColor="?attr/textColor"
                         android:textSize="@dimen/text_large"
-                        android:textStyle="bold"
-
-                        />
+                        android:textStyle="bold" />
 
 
                     <LinearLayout
@@ -182,7 +183,7 @@
                             <com.zoho.statusiqsdk.Utils.StatusIQTextView
                                 android:id="@+id/tv_date_one"
                                 tools:text="Mar 17"
-                                android:textColor="@color/status_iq_light_text"
+                                android:textColor="?attr/textColor"
                                 android:layout_width="wrap_content"
                                 android:layout_gravity="center_horizontal"
                                 android:layout_height="wrap_content"/>
@@ -206,12 +207,12 @@
                             android:orientation="vertical"
                             android:layout_marginVertical="@dimen/margin_small"
                             android:paddingVertical="@dimen/margin_medium"
-                            android:background="@drawable/status_iq_date_bg"
-                            >
+                            android:background="@drawable/status_iq_date_bg">
+
                             <com.zoho.statusiqsdk.Utils.StatusIQTextView
                                 android:id="@+id/tv_date_two"
                                 tools:text="Mar 17"
-                                android:textColor="@color/status_iq_light_text"
+                                android:textColor="?attr/textColor"
                                 android:layout_width="wrap_content"
                                 android:layout_gravity="center_horizontal"
                                 android:layout_height="wrap_content"/>
@@ -240,7 +241,7 @@
                             <com.zoho.statusiqsdk.Utils.StatusIQTextView
                                 android:id="@+id/tv_date_three"
                                 tools:text="Mar 17"
-                                android:textColor="@color/status_iq_light_text"
+                                android:textColor="?attr/textColor"
                                 android:layout_width="wrap_content"
                                 android:layout_gravity="center_horizontal"
                                 android:layout_height="wrap_content"/>
@@ -269,7 +270,7 @@
                             <com.zoho.statusiqsdk.Utils.StatusIQTextView
                                 android:id="@+id/tv_date_four"
                                 tools:text="Mar 17"
-                                android:textColor="@color/status_iq_light_text"
+                                android:textColor="?attr/textColor"
                                 android:layout_width="wrap_content"
                                 android:layout_gravity="center_horizontal"
                                 android:layout_height="wrap_content"/>
@@ -308,7 +309,7 @@
                             <com.zoho.statusiqsdk.Utils.StatusIQTextView
                                 android:id="@+id/tv_date_five"
                                 tools:text="Mar 17"
-                                android:textColor="@color/status_iq_light_text"
+                                android:textColor="?attr/textColor"
                                 android:layout_width="wrap_content"
                                 android:layout_gravity="center_horizontal"
                                 android:layout_height="wrap_content"/>
@@ -337,7 +338,7 @@
                             <com.zoho.statusiqsdk.Utils.StatusIQTextView
                                 android:id="@+id/tv_date_six"
                                 tools:text="Mar 17"
-                                android:textColor="@color/status_iq_light_text"
+                                android:textColor="?attr/textColor"
                                 android:layout_width="wrap_content"
                                 android:layout_gravity="center_horizontal"
                                 android:layout_height="wrap_content"/>
@@ -361,12 +362,12 @@
                             android:orientation="vertical"
                             android:layout_margin="@dimen/margin_small"
                             android:paddingVertical="@dimen/margin_medium"
-                            android:background="@drawable/status_iq_date_bg"
-                            >
+                            android:background="@drawable/status_iq_date_bg">
+
                             <com.zoho.statusiqsdk.Utils.StatusIQTextView
                                 android:id="@+id/tv_date_seven"
                                 tools:text="Mar 17"
-                                android:textColor="@color/status_iq_light_text"
+                                android:textColor="?attr/textColor"
                                 android:layout_width="wrap_content"
                                 android:layout_gravity="center_horizontal"
                                 android:layout_height="wrap_content"/>
@@ -397,13 +398,14 @@
                 android:layout_marginHorizontal="@dimen/margin_medium"
                 android:padding="@dimen/margin_small"
                 android:layout_marginBottom="@dimen/margin_medium"
+                android:background="?attr/statusIQCardBackgroundColor"
                 >
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/margin_small"
-                    >
+                    android:background="?attr/statusIQCardBackgroundColor">
 
                     <ImageView
                         android:id="@+id/img_operational"

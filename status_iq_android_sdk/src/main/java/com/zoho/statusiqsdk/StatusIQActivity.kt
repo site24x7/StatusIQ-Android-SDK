@@ -174,9 +174,7 @@ internal class StatusIQActivity : AppCompatActivity() {
                                                 val componentGroup =
                                                     componentGroupArray.optJSONObject(j)
 
-                                                if (componentGroup.optString(Constants.DISPLAY_NAME)
-                                                        .equals(componentName)
-                                                ) {
+                                                if (componentGroup.optString(Constants.DISPLAY_NAME).equals(componentName)) {
                                                     fetchSingleComponentDataFromServer(
                                                         service,
                                                         componentGroup.optString(Constants.ENCCOMPONENTID),
@@ -194,9 +192,7 @@ internal class StatusIQActivity : AppCompatActivity() {
                                             }
 
                                         } else {
-                                            if (currentStatus.optString(Constants.DISPLAY_NAME)
-                                                    .equals(componentName)
-                                            ) {
+                                            if (currentStatus.optString(Constants.DISPLAY_NAME).equals(componentName)) {
                                                 fetchSingleComponentDataFromServer(
                                                     service,
                                                     currentStatus.optString(Constants.ENCCOMPONENTID),

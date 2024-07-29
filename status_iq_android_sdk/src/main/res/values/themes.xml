@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
 
     <style name="Theme.STATUS_IQ" parent="Theme.AppCompat.DayNight.NoActionBar">
@@ -24,7 +24,7 @@
 
     <attr name="textColor" format="color"/>
     <attr name="statusIQCardBackgroundColor" format="color"/>
-    <attr name="incidentHistoryIconColor" format="color"/>
+    <attr name="componentStatusBackgroundColor" format="color"/>
     <attr name="statusIqBackgroundColor" format="color"/>
     <attr name="statusBarColor" format="color"/>
     <attr name="incidentItemCardBackgroundColor" format="color"/>
