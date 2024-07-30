@@ -8,5 +8,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="light_text">#8A000000</color>
-
+    <color name="backgroundColor">#FFF5F5F5</color>
+    <color name="incidentItemBackgroundColor">#FFF5F5F5</color>
 </resources>
